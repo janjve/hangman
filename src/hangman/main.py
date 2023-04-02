@@ -100,7 +100,7 @@ def display_state(game: HangmanGame, action: str) -> None:
     else:
         # Print state
         print(
-            f"Try to guess word: {game.masked_word} [{game.num_guesses} / {game.max_guesses}]"
+            f"Try to guess: {game.masked_word} [{game.num_guesses} / {game.max_guesses}]"
         )
         if with_hint:
             print(f"Hint: {game.word_hint}")
