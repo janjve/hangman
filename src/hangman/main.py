@@ -156,14 +156,12 @@ def run_guess_game(max_guesses: int, guess_words: bool, guess_phrases: bool):
 @app.command()
 def guess(
     mistakes: int = 5,
-    include_words: bool = True,
-    include_phrases: bool = True,
+    words: bool = True,
+    phrases: bool = True,
 ):
-    if not (include_words or include_phrases):
+    if not (words or phrases):
         raise typer.BadParameter("Must include at least one of words and phrases")
-    run_guess_game(
-        max_guesses=mistakes, guess_words=include_words, guess_phrases=include_phrases
-    )
+    run_guess_game(max_guesses=mistakes, guess_words=words, guess_phrases=phrases)
 
 
 def main():
