@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hangman"
+version = "0.0.1"
+dependencies = [
+    "typer[all]",
+    "pytest",
+    "black"
+]
+
+[project.scripts]
+hangman = "hangman.main:main"
