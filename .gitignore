@@ -5,5 +5,3 @@ data/
 **egg-info/
 __pycache__/
 .pytest_cache/
-clean.py
-gpt-output.csv

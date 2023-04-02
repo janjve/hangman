@@ -161,7 +161,7 @@ def guess(
 ):
     if not (words or phrases):
         raise typer.BadParameter("Must include at least one of words and phrases")
-    run_guess_game(max_guesses=mistakes, guess_words=words, guess_phrases=phrases)
+    run_guess_game(max_guesses=mistakes + 1, guess_words=words, guess_phrases=phrases)
 
 
 def main():
